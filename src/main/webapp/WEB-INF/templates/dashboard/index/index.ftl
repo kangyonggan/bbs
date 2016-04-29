@@ -3,10 +3,9 @@
 <@override name="breadcrumbs">
 <ul class="breadcrumb">
     <li>
-        <i class="ace-icon fa fa-home home-icon"></i>
-        <a href="#">Home</a>
+        <i class="menu-icon fa fa-tachometer"></i>
+        <a href="${ctx}/dashboard">工作台</a>
     </li>
-    <li class="active">Dashboard</li>
 </ul>
 </@override>
 
@@ -20,15 +19,15 @@
 
             <i class="ace-icon fa fa-check green"></i>
 
-            Welcome to
+            欢迎进入
             <strong class="green">
-                Ace
-                <small>(v1.3.3)</small>
+                <@spring.message "app.name" />
+                <small><@spring.message "app.version"/></small>
             </strong>,
-            the lightweight, feature-rich and easy to use admin template.
+            您可以在从左边选取菜单进行操作.
         </div>
     </div>
 </div>
 </@override>
 
-<@extends name="../layout.ftl"/>
+<@extends name="../../layout.ftl"/>

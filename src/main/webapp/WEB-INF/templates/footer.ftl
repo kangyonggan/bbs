@@ -2,8 +2,8 @@
     <div class="footer-inner">
         <div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
+                        <@spring.message "app.name"/> &copy; <@spring.message "app.copyright.year"/> <@spring.message "app.version"/>
+                            技术支持: <@spring.message "app.author"/>
 						</span>
 
             &nbsp; &nbsp;

@@ -9,6 +9,9 @@
         <result column="username" property="username" jdbcType="VARCHAR"/>
         <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="realname" property="realname" jdbcType="VARCHAR"/>
+        <result column="logos" property="logos" jdbcType="VARCHAR"/>
+        <result column="logom" property="logom" jdbcType="VARCHAR"/>
+        <result column="logol" property="logol" jdbcType="VARCHAR"/>
         <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
         <result column="createdTime" property="createdtime" jdbcType="TIMESTAMP"/>

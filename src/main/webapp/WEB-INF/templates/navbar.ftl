@@ -11,10 +11,10 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="#" class="navbar-brand">
+            <a href="${ctx}/dashboard" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    Ace Admin
+                <@spring.message "app.name"/>
                 </small>
             </a>
         </div>
@@ -182,7 +182,8 @@
                             <ul class="dropdown-menu dropdown-navbar">
                                 <li>
                                     <a href="#" class="clearfix">
-                                        <img src="${ctx}/static/ace/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar"/>
+                                        <img src="${ctx}/static/ace/assets/avatars/avatar.png" class="msg-photo"
+                                             alt="Alex's Avatar"/>
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -217,7 +218,8 @@
 
                                 <li>
                                     <a href="#" class="clearfix">
-                                        <img src="${ctx}/static/ace/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar"/>
+                                        <img src="${ctx}/static/ace/assets/avatars/avatar4.png" class="msg-photo"
+                                             alt="Bob's Avatar"/>
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -234,7 +236,8 @@
 
                                 <li>
                                     <a href="#" class="clearfix">
-                                        <img src="${ctx}/static/ace/assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar"/>
+                                        <img src="${ctx}/static/ace/assets/avatars/avatar2.png" class="msg-photo"
+                                             alt="Kate's Avatar"/>
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -251,7 +254,8 @@
 
                                 <li>
                                     <a href="#" class="clearfix">
-                                        <img src="${ctx}/static/ace/assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar"/>
+                                        <img src="${ctx}/static/ace/assets/avatars/avatar5.png" class="msg-photo"
+                                             alt="Fred's Avatar"/>
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -280,10 +284,11 @@
                 <!-- #section:basics/navbar.user_menu -->
                 <li class="light-blue">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src="${ctx}/static/ace/assets/avatars/user.jpg" alt="Jason's Photo"/>
+                        <img class="nav-user-photo" src="${ctx}/static/ace/assets/avatars/user.jpg"
+                             alt="Jason's Photo"/>
 								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
+									<small>欢迎,</small>
+									系统管理员
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -293,14 +298,14 @@
                         <li>
                             <a href="#">
                                 <i class="ace-icon fa fa-cog"></i>
-                                Settings
+                                系统设置
                             </a>
                         </li>
 
                         <li>
                             <a href="profile.html">
                                 <i class="ace-icon fa fa-user"></i>
-                                Profile
+                                个人资料
                             </a>
                         </li>
 
@@ -309,7 +314,7 @@
                         <li>
                             <a href="#">
                                 <i class="ace-icon fa fa-power-off"></i>
-                                Logout
+                                安全退出
                             </a>
                         </li>
                     </ul>

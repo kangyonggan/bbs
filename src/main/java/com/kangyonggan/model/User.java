@@ -27,6 +27,12 @@ public class User implements Serializable {
 
     private String realname;
 
+    private String logos;
+
+    private String logom;
+
+    private String logol;
+
     private String mobile;
 
     private String email;
@@ -71,6 +77,30 @@ public class User implements Serializable {
         this.realname = realname;
     }
 
+    public String getLogos() {
+        return logos;
+    }
+
+    public void setLogos(String logos) {
+        this.logos = logos;
+    }
+
+    public String getLogom() {
+        return logom;
+    }
+
+    public void setLogom(String logom) {
+        this.logom = logom;
+    }
+
+    public String getLogol() {
+        return logol;
+    }
+
+    public void setLogol(String logol) {
+        this.logol = logol;
+    }
+
     public String getMobile() {
         return mobile;
     }
@@ -110,6 +140,9 @@ public class User implements Serializable {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", realname='" + realname + '\'' +
+                ", logos='" + logos + '\'' +
+                ", logom='" + logom + '\'' +
+                ", logol='" + logol + '\'' +
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
                 ", createdtime=" + createdtime +
