@@ -329,7 +329,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${plugin.tomcat.version}</version>
                 <configuration>
-                    <port>8080</port>
+                    <port>8086</port>
                     <path>/</path>
                     <uriEncoding>${project.build.sourceEncoding}</uriEncoding>
                 </configuration>
@@ -357,8 +357,18 @@
 
         <resources>
             <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
             </resource>
         </resources>
     </build>

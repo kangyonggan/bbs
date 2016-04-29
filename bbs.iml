@@ -11,11 +11,22 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/.git/objects/e1/b1812872db023188be691959078b6a6aa86cc1</file>
+          <file>file://$MODULE_DIR$/src/main/resources/app.xml</file>
+          <file>file://$MODULE_DIR$/.git/objects/8c</file>
+          <file>file://$MODULE_DIR$/.git/objects/75/45fa87013da384a362cb4c721a2fecbdd7aa0a</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
