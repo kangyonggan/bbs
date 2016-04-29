@@ -33,6 +33,10 @@ public class User implements Serializable {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createdtime;
 
+    @Column(name = "updatedTime")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    private Date updatedtime;
+
     public Long getId() {
         return id;
     }
@@ -89,6 +93,14 @@ public class User implements Serializable {
         this.createdtime = createdtime;
     }
 
+    public Date getUpdatedtime() {
+        return updatedtime;
+    }
+
+    public void setUpdatedtime(Date updatedtime) {
+        this.updatedtime = updatedtime;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -99,6 +111,7 @@ public class User implements Serializable {
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
                 ", createdtime=" + createdtime +
+                ", updatedtime=" + updatedtime +
                 '}';
     }
 }

@@ -13,4 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserServiceImpl extends BaseService<User> implements UserService {
 
+    public User getUser(long id) {
+        return super.selectByPrimaryKey(id);
+    }
 }
