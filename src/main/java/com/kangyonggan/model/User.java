@@ -10,6 +10,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * 用户
+ *
  * @author kangyonggan
  * @since 16/4/29
  */

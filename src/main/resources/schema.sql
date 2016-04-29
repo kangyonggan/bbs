@@ -34,17 +34,32 @@ CREATE TABLE `bbs`.`article` (
   `id`           BIGINT       NOT NULL AUTO_INCREMENT,
   `title`        VARCHAR(256) NOT NULL,
   `body`         LONGTEXT     NOT NULL,
-  `userId`       BIGINT       NOT NULL,
   `categoryId`   BIGINT       NOT NULL,
   `categoryName` VARCHAR(64)  NOT NULL,
   `status`       VARCHAR(32)  NULL     DEFAULT 'published',
   `hits`         BIGINT       NULL     DEFAULT 0,
   `top`          TINYINT      NULL     DEFAULT 0,
   `topTime`      DATETIME     NULL     DEFAULT NULL,
-  `username`     VARCHAR(64)  NULL     DEFAULT '',
+  `userId`       BIGINT       NOT NULL,
+  `username`     VARCHAR(64)  NOT NULL,
   `createdTime`  DATETIME     NOT NULL,
-  `updatedTime` DATETIME     NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `username_UNIQUE` (`username` ASC)
+  `updatedTime`  DATETIME     NOT NULL,
+  PRIMARY KEY (`id`)
 )
   COMMENT '帖子表';
+
+
+CREATE TABLE `bbs`.`reply` (
+  `id`          BIGINT      NOT NULL AUTO_INCREMENT,
+  `body`        LONGTEXT    NOT NULL,
+  `status`      VARCHAR(32) NULL     DEFAULT 'published',
+  `hits`        BIGINT      NULL     DEFAULT 0,
+  `articleId`   BIGINT      NOT NULL,
+  `userId`      BIGINT      NOT NULL,
+  `username`    VARCHAR(64) NOT NULL,
+  `createdTime` DATETIME    NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  COMMENT '帖子回复表';
+
+

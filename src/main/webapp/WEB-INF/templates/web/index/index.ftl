@@ -1,8 +1,5 @@
-
 <@override name="main">
-override
-${user.realname!'asd'}
-override
+<a href="${ctx}/dashboard">dashboard</a>
 </@override>
 
 <@extends name="../layout.ftl"/>

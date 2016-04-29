@@ -1,4 +1,4 @@
-package com.kangyonggan.controller.web;
+package com.kangyonggan.controller.dashboard;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 16/4/29
  */
 @Controller
-@RequestMapping
-public class IndexController {
+@RequestMapping("dashboard")
+public class DashboardIndexController {
 
-    private static final String PATH_ROOT = "web/index";
+    private static final String PATH_ROOT = "dashboard/index";
     private static final String PATH_INDEX = PATH_ROOT + "/index";
 
     @RequestMapping
