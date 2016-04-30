@@ -296,14 +296,14 @@
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="#">
+                            <a href="${ctx}/dashboard/system">
                                 <i class="ace-icon fa fa-cog"></i>
                                 系统设置
                             </a>
                         </li>
 
                         <li>
-                            <a href="profile.html">
+                            <a href="${ctx}/dashboard/user/1">
                                 <i class="ace-icon fa fa-user"></i>
                                 个人资料
                             </a>
@@ -312,7 +312,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="${ctx}/logout">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 安全退出
                             </a>

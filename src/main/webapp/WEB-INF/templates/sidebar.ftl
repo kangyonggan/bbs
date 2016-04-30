@@ -106,7 +106,7 @@
                 <li class="">
                     <a href="form-elements.html">
                         <i class="menu-icon fa fa-caret-right"></i>
-                        我的资料
+                        个人资料
                     </a>
 
                     <b class="arrow"></b>
