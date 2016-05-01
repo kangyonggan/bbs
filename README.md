@@ -16,7 +16,7 @@
 - 安装git版本控制工具
 - 安装jdk1.7 
 - 安装IntelliJ IDEA
-- 打开IDEA, 从https://github.com/kangyonggan/bbs把项目拉取到本地
+- 打开IDEA, 从 https://github.com/kangyonggan/bbs 把项目拉取到本地
 - mvn clean install 打包项目
 - mvn tomcat7:run 启动项目, 也可以把war包扔到tomcat/webapps目录下运行
 
