@@ -11,7 +11,7 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${ctx}/dashboard" class="navbar-brand">
+            <a href="${ctx}/" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                 <@spring.message "app.name"/>

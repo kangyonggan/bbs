@@ -37,7 +37,7 @@
     <![endif]-->
 
     <link rel="stylesheet" href="${ctx}/static/app/css/app.css"/>
-<@block name="style"/>
+<@block name="page-style"/>
 
     <!--[if lte IE 8]>
     <script src="${ctx}/static/libs/html5shiv.min.js"></script>
@@ -50,29 +50,8 @@
 <#include "navbar.ftl">
 
 <div class="main-container" id="main-container">
-<#include "sidebar.ftl">
-    <div class="main-content">
-        <div class="main-content-inner">
-            <div class="breadcrumbs" id="breadcrumbs">
-            <@block name="breadcrumbs"/>
-            </div>
 
-            <div class="page-content">
-                <div class="page-header">
-                    <h1>
-                    ${page_header!''}
-                        <span class="pull-right inline">
-                        <@block name="button" />
-                        </span>
-                    </h1>
-                </div>
-
-                <div class="row">
-                <@block name="content"/>
-                </div>
-            </div>
-        </div>
-    </div>
+<@block name="main"/>
 
 <#include "footer.ftl">
 
@@ -80,6 +59,7 @@
         <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
     </a>
 </div>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -87,6 +67,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="myLargeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -108,6 +89,6 @@
 <script src="${ctx}/static/ace/assets/js/ace.min.js"></script>
 <script>var ctx = '${ctx}';</script>
 <script src="${ctx}/static/app/js/app.js"></script>
-<@block name="script"/>
+<@block name="page-script"/>
 </body>
 </html>

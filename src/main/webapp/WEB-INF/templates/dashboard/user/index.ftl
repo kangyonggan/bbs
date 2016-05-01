@@ -1,5 +1,5 @@
 <#assign title="用户管理">
-<#assign page_header="用户管理">
+<#assign header="用户管理">
 
 <#assign status = RequestParameters.status!'' />
 <#assign username = RequestParameters.username!'' />
@@ -95,4 +95,4 @@
 <script src="${ctx}/static/app/js/dashboard/user/index.js"></script>
 </@override>
 
-<@extends name="../../layout.ftl"/>
+<@extends name="../layout.ftl"/>

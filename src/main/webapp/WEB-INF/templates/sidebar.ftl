@@ -30,7 +30,7 @@
     </div>
 
     <ul class="nav nav-list">
-        <li>
+        <li id="dashboard">
             <a href="${ctx}/dashboard">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> 工作台 </span>

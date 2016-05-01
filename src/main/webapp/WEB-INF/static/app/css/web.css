@@ -1,0 +1,174 @@
+
+/*web*/
+
+.web-body {
+    font-size: 14px;
+    background: url('/static/app/images/bg.png') left top repeat;
+}
+
+#header > div {
+    height: 80px;
+    padding-top: 14px;
+    background: #8a0e0c;
+}
+
+#header > div > div {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#header > div > div > .navbar-buttons {
+    height: 80px;
+    padding-top: 14px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+#header > div > div > .navbar-buttons > a {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+#header > div > div > .navbar-buttons > a:hover {
+    text-decoration: none;
+}
+
+#navbar {
+    width: 1000px;
+    margin: 0 auto;
+    height: 66px;
+    background: #cf4f16;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#navbar > ul {
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    height: 66px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#navbar > ul > li {
+    float: left;
+}
+
+#navbar > ul > li > a {
+    display: block;
+    width: 100px;
+    margin: 0 10px;
+    color: #eee;
+    font-size: 17px;
+    height: 66px;
+    line-height: 66px;
+}
+
+#navbar > ul > li > a:hover {
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 5px solid #ae2d00;
+}
+
+#main {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#main > .breadcrumbs2 {
+    height: 40px;
+    border-bottom: 1px solid #999;
+    color: #999;
+}
+
+#main > .breadcrumbs2 > span {
+    display: block;
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#main > .breadcrumbs2 > ul {
+    list-style: none;
+    float: left;
+    margin: 0;
+}
+
+#main > .breadcrumbs2 > ul > li {
+    float: left;
+}
+
+#main > .breadcrumbs2 > ul > li > a, span {
+    color: #999;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+#main > .breadcrumbs2 > ul > li > a:hover {
+    text-decoration: none;
+}
+
+#main > .breadcrumbs2 > ul > li > .active {
+    color: #000;
+}
+
+#main .content {
+
+}
+
+#main .content .block {
+    width: 180px;
+    height: 150px;
+    background: #ae2d00;
+    float: left;
+    margin: 10px;
+}
+
+#main .content .slider {
+    width: 580px;
+    height: 320px;
+    background: #ae2d00;
+    float: left;
+    margin: 10px;
+}
+
+
+
+
+
+
+#friend {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+#friend > a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #000;
+}
+
+
+#friend > a:hover {
+    color: #f60;
+    text-decoration: none;
+}
+
+#footer {
+    clear: both;
+    height: 120px;
+    background: url('/static/app/images/bg3.png') left top repeat-x;
+    color: #d1b59f;
+    line-height: 120px;
+    text-align: center;
+}

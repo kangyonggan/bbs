@@ -52,4 +52,12 @@ public interface UserService {
      * @return
      */
     int update(User user);
+
+    /**
+     * 根据用户名查询用户
+     *
+     * @param username
+     * @return
+     */
+    User findUserByUsername(String username);
 }

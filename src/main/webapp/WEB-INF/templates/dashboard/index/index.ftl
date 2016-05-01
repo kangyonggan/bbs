@@ -1,10 +1,11 @@
 <#assign title="工作台">
+<#assign header="工作台">
 
 <@override name="breadcrumbs">
 <ul class="breadcrumb">
-    <li>
+    <li class="active">
         <i class="menu-icon fa fa-tachometer"></i>
-        <a href="${ctx}/dashboard">工作台</a>
+        工作台
     </li>
 </ul>
 </@override>
@@ -30,4 +31,8 @@
 </div>
 </@override>
 
-<@extends name="../../layout.ftl"/>
+<@override name="script">
+<script src="${ctx}/static/app/js/dashboard/index/index.js"></script>
+</@override>
+
+<@extends name="../layout.ftl"/>

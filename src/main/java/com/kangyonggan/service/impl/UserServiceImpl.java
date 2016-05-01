@@ -21,6 +21,29 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl extends BaseService<User> implements UserService {
 
+    public void delete(Long id) {
+        super.deleteByPrimaryKey(id);
+    }
+
+    public int update(User user) {
+        user.setUpdatedtime(new Date());
+        return super.updateByPrimaryKeySelective(user);
+    }
+
+    @Override
+    public int save(User user) {
+        user.setCreatedtime(new Date());
+        user.setUpdatedtime(new Date());
+        user.setStatus(UserStatusEnum.UNLOCK.getStatus());
+        return super.save(user);
+    }
+
+    public User findUserByUsername(String username) {
+        User user = new User();
+        user.setUsername(username);
+        return super.selectOne(user);
+    }
+
     public User getUser(long id) {
         return super.selectByPrimaryKey(id);
     }
@@ -48,22 +71,5 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
 
         PageHelper.startPage(pageNow, AppConstants.PAGE_SIZE);
         return super.selectByExample(example);
-    }
-
-    public void delete(Long id) {
-        super.deleteByPrimaryKey(id);
-    }
-
-    public int update(User user) {
-        user.setUpdatedtime(new Date());
-        return super.updateByPrimaryKeySelective(user);
-    }
-
-    @Override
-    public int save(User user) {
-        user.setCreatedtime(new Date());
-        user.setUpdatedtime(new Date());
-        user.setStatus(UserStatusEnum.UNLOCK.getStatus());
-        return super.save(user);
     }
 }
