@@ -37,6 +37,8 @@ public class User implements Serializable {
 
     private String email;
 
+    private String status;
+
     @Column(name = "createdTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createdtime;
@@ -117,6 +119,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public Date getCreatedtime() {
         return createdtime;
     }
@@ -145,6 +155,7 @@ public class User implements Serializable {
                 ", logol='" + logol + '\'' +
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
+                ", status='" + status + '\'' +
                 ", createdtime=" + createdtime +
                 ", updatedtime=" + updatedtime +
                 '}';

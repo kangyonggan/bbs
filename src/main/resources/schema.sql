@@ -8,6 +8,7 @@ CREATE TABLE `bbs`.`user` (
   `logol`       VARCHAR(64)  NULL     DEFAULT '',
   `mobile`      VARCHAR(32)  NULL     DEFAULT '',
   `email`       VARCHAR(64)  NULL     DEFAULT '',
+  `status`      VARCHAR(32)  NULL     DEFAULT 'unlock',
   `createdTime` DATETIME     NOT NULL,
   `updatedTime` DATETIME     NOT NULL,
   PRIMARY KEY (`id`),

@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title><@spring.message "app.name"/> - ${title!''}</title>
@@ -16,6 +19,9 @@
 
     <!-- fonts -->
     <link rel="stylesheet" href="${ctx}/static/ace/assets/css/ace-fonts.css"/>
+
+    <!-- skins -->
+    <link rel="stylesheet" href="${ctx}/static/ace/assets/css/ace-skins.css"/>
 
     <!-- ace styles -->
     <link rel="stylesheet" href="${ctx}/static/ace/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style"/>
@@ -52,7 +58,18 @@
             </div>
 
             <div class="page-content">
-            <@block name="content"/>
+                <div class="page-header">
+                    <h1>
+                    ${page_header!''}
+                        <span class="pull-right inline">
+                        <@block name="button" />
+                        </span>
+                    </h1>
+                </div>
+
+                <div class="row">
+                <@block name="content"/>
+                </div>
             </div>
         </div>
     </div>
@@ -63,12 +80,34 @@
         <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
     </a>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="message-loading-overlay"><i class="ace-icon fa fa-spinner fa-spin orange bigger-125"></i></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myLargeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="message-loading-overlay"><i class="ace-icon fa fa-spinner fa-spin orange bigger-125"></i></div>
+        </div>
+    </div>
+</div>
 
 <script src="${ctx}/static/libs/jquery/jquery.min.js"></script>
 <script src="${ctx}/static/libs/bootstrap/bootstrap.min.js"></script>
+<script src="${ctx}/static/libs/jquery/jquery.bootstrap.min.js"></script>
+<script src="${ctx}/static/libs/jquery/jquery.form.min.js"></script>
+<script src="${ctx}/static/libs/jquery/jquery.validate.min.js"></script>
+<script src="${ctx}/static/libs/jquery/jquery.validate.extends.js"></script>
+<script src="${ctx}/static/libs/jquery/jquery.gritter.min.js"></script>
 <script src="${ctx}/static/ace/assets/js/ace-extra.min.js"></script>
 <script src="${ctx}/static/ace/assets/js/ace-elements.min.js"></script>
 <script src="${ctx}/static/ace/assets/js/ace.min.js"></script>
+<script>var ctx = '${ctx}';</script>
+<script src="${ctx}/static/app/js/app.js"></script>
 <@block name="script"/>
 </body>
 </html>

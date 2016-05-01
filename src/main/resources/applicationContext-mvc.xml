@@ -39,8 +39,8 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <mvc:resources mapping="/static/**" location="/WEB-INF/static/" cache-period="31556926"/>
-    <mvc:resources mapping="/favicon.ico" location="/"/>
+    <!--<mvc:resources mapping="/static/**" location="/WEB-INF/static/" cache-period="31556926"/>-->
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
 
     <!-- 定义无需Controller的url<->view直接映射 -->
     <mvc:view-controller path="/403" view-name="/403"/>

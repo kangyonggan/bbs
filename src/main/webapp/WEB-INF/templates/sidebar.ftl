@@ -30,7 +30,7 @@
     </div>
 
     <ul class="nav nav-list">
-        <li class="active">
+        <li>
             <a href="${ctx}/dashboard">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> 工作台 </span>
@@ -39,8 +39,8 @@
             <b class="arrow"></b>
         </li>
 
-        <li class="">
-            <a href="#" class="dropdown-toggle">
+        <li class="" id="user">
+            <a href="" class="dropdown-toggle">
                 <i class="menu-icon fa fa-users"></i>
                 <span class="menu-text"> 用户 </span>
 
@@ -50,8 +50,8 @@
             <b class="arrow"></b>
 
             <ul class="submenu">
-                <li class="">
-                    <a href="tables.html">
+                <li class="" id="user-manage">
+                    <a href="${ctx}/dashboard/user">
                         <i class="menu-icon fa fa-caret-right"></i>
                         用户管理
                     </a>
