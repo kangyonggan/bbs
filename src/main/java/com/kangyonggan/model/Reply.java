@@ -39,10 +39,6 @@ public class Reply implements Serializable {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createdTime;
 
-    @Column(name = "updatedTime")
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date updatedTime;
-
     public Long getId() {
         return id;
     }
@@ -107,14 +103,6 @@ public class Reply implements Serializable {
         this.createdTime = createdTime;
     }
 
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
     @Override
     public String toString() {
         return "Reply{" +
@@ -126,7 +114,6 @@ public class Reply implements Serializable {
                 ", userId=" + userId +
                 ", username='" + username + '\'' +
                 ", createdTime=" + createdTime +
-                ", updatedTime=" + updatedTime +
                 '}';
     }
 }

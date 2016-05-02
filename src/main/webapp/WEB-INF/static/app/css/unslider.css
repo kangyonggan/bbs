@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.slider {
+    position: relative;
+    text-align: center
+}
+
+.slider .tabcon li {
+    float: left;
+}
+
+/*自适应宽高*/
+.dots {
+    position: absolute;
+    right: 10px;
+    width: 100%;
+    bottom: 6px;
+    text-align: right;
+}
+
+/*修改text-align 值 可以调整控制点是居中、居右、居左*/
+.dots li {
+    display: inline-block;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    font-size: 0px;
+    line-height: 0px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #2fbffa;
+    /*-khtml-border-radius: 5px;*/
+    /*-ms-border-radius: 5px;*/
+    /*-o-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*-webkit-border-radius: 5px;*/
+    /*border-radius: 5px*/
+}
+
+.dots li.active {
+    background-color: #ffd800;
+}
+
+/*圆角长方条控制*/
+.boxRadius .dots li {
+    width: 8%;
+    height: 4px;
+}

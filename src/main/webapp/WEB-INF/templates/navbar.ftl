@@ -287,27 +287,33 @@
                         <img class="nav-user-photo" src="${ctx}/static/ace/assets/avatars/user.jpg"
                              alt="Jason's Photo"/>
 								<span class="user-info">
-									<small>欢迎,</small>
-									系统管理员
+                                    <#if token??>
+                                        <small>欢迎,</small>
+    									${token.realname}
+                                    <#else>
+                                        未登录
+                                    </#if>
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
                     </a>
-
+                    <#if token??>
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${ctx}/dashboard/system">
+                            <a href="${ctx}/dashboard">
                                 <i class="ace-icon fa fa-cog"></i>
-                                系统设置
+                                工作台
                             </a>
                         </li>
 
+                        <#if token.id==1>
                         <li>
-                            <a href="${ctx}/dashboard/user/1">
+                            <a href="${ctx}/admin">
                                 <i class="ace-icon fa fa-user"></i>
-                                个人资料
+                                后台
                             </a>
                         </li>
+                        </#if>
 
                         <li class="divider"></li>
 
@@ -318,6 +324,7 @@
                             </a>
                         </li>
                     </ul>
+                    </#if>
                 </li>
             </ul>
         </div>

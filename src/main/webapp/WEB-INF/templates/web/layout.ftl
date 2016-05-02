@@ -83,7 +83,15 @@
 <script src="${ctx}/static/ace/assets/js/ace-extra.min.js"></script>
 <script src="${ctx}/static/ace/assets/js/ace-elements.min.js"></script>
 <script src="${ctx}/static/ace/assets/js/ace.min.js"></script>
-<script>var ctx = '${ctx}';</script>
+<script>
+    var ctx = '${ctx}';
+    <#if token??>
+    var hasLogin = true;
+    <#else>
+    var hasLogin = false;
+    </#if>
+</script>
+<script src="${ctx}/static/app/js/app.js"></script>
 <@block name="web-script"/>
 </body>
 </html>

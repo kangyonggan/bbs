@@ -26,6 +26,9 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
 
     public int update(User user) {
         user.setUpdatedTime(new Date());
+        if (StringUtil.isEmpty(user.getRealname())) {
+            user.setRealname(user.getUsername());
+        }
         return super.updateByPrimaryKeySelective(user);
     }
 
@@ -33,6 +36,9 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     public int save(User user) {
         user.setCreatedTime(new Date());
         user.setUpdatedTime(new Date());
+        if (StringUtil.isEmpty(user.getRealname())) {
+            user.setRealname(user.getUsername());
+        }
         user.setStatus(UserStatusEnum.UNLOCK.getStatus());
         return super.save(user);
     }

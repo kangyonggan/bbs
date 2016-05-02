@@ -38,12 +38,13 @@ public interface ArticleService {
      *
      * @param pageNow
      * @param pageSize
+     * @param userId
      * @param status
      * @param title
      * @param categoryName
      * @param username
      * @return
      */
-    List<Article> searchArticles(int pageNow, int pageSize, String status, String title, String categoryName, String username);
+    List<Article> searchArticles(int pageNow, int pageSize, Long userId, String status, String title, String categoryName, String username);
 
 }

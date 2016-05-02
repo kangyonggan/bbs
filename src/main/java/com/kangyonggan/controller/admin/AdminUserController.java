@@ -5,6 +5,7 @@ import com.kangyonggan.constants.AppConstants;
 import com.kangyonggan.model.User;
 import com.kangyonggan.model.ValidationResponse;
 import com.kangyonggan.service.UserService;
+import com.kangyonggan.util.StringUtil;
 import freemarker.ext.beans.BeansWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -60,6 +61,7 @@ public class AdminUserController {
 
         model.addAttribute("enums", BeansWrapper.getDefaultInstance().getEnumModels());
         model.addAttribute("page", page);
+        model.addAttribute("menu", "admin");
         return PATH_INDEX;
     }
 
@@ -72,6 +74,7 @@ public class AdminUserController {
     @RequestMapping(value = "create", method = RequestMethod.GET)
     public String create(Model model) {
         model.addAttribute("user", new User());
+        model.addAttribute("menu", "admin");
         return PATH_CREATE_MODAL;
     }
 
@@ -85,6 +88,7 @@ public class AdminUserController {
     @RequestMapping(value = "{id:[\\d]+}/edit", method = RequestMethod.GET)
     public String edit(@PathVariable("id") Long id, Model model) {
         model.addAttribute("user", userService.getUser(id));
+        model.addAttribute("menu", "admin");
         return PATH_CREATE_MODAL;
     }
 
@@ -142,6 +146,7 @@ public class AdminUserController {
     @RequestMapping(value = "{id:[\\d]+}", method = RequestMethod.GET)
     public String detail(@PathVariable("id") Long id, Model model) {
         model.addAttribute("user", userService.getUser(id));
+        model.addAttribute("menu", "admin");
         return PATH_DETAIL_MODAL;
     }
 

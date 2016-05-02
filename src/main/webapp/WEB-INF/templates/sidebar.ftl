@@ -29,109 +29,11 @@
         </div>
     </div>
 
-    <ul class="nav nav-list">
-        <li>
-            <a href="${ctx}/dashboard">
-                <i class="menu-icon fa fa-tachometer"></i>
-                <span class="menu-text"> 工作台 </span>
-            </a>
-
-            <b class="arrow"></b>
-        </li>
-
-        <li class="" id="user-admin">
-            <a href="" class="dropdown-toggle">
-                <i class="menu-icon fa fa-users"></i>
-                <span class="menu-text"> 用户 </span>
-
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
-
-            <b class="arrow"></b>
-
-            <ul class="submenu">
-                <li class="" id="user-admin-manage">
-                    <a href="${ctx}/admin/user">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        用户管理
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-            </ul>
-        </li>
-
-        <li class="" id="article-dashboard">
-            <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-pencil-square-o"></i>
-                <span class="menu-text"> 帖子 </span>
-
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
-
-            <b class="arrow"></b>
-
-            <ul class="submenu">
-                <li class="" id="article-admin-manage">
-                    <a href="article">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        帖子管理
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="" id="article-dashboard-manage">
-                    <a href="${ctx}/dashboard/article">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        发表帖子
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-            </ul>
-        </li>
-
-        <li class="">
-            <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-user"></i>
-                <span class="menu-text"> 个人 </span>
-
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
-
-            <b class="arrow"></b>
-
-            <ul class="submenu">
-                <li class="">
-                    <a href="form-elements.html">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        个人资料
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="">
-                    <a href="form-elements-2.html">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        我的头像
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="">
-                    <a href="form-elements-2.html">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        修改密码
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <#if menu?? && menu=="admin">
+        <@c.menu_admin_tree/>
+    <#else>
+        <@c.menu_dashboard_tree/>
+    </#if>
 
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
         <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"

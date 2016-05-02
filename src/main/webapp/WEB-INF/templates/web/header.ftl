@@ -11,8 +11,12 @@
             </div>
 
             <div class="navbar-buttons navbar-header pull-right" role="navigation">
-                <a href="${ctx}/login">登录</a>
-                | <a href="${ctx}/register">注册</a>
+                <#if !token??>
+                    <a href="${ctx}/login">登录</a>
+                    | <a href="${ctx}/register">注册</a>
+                <#else>
+                    欢迎: <a href="${ctx}/dashboard">${token.realname}</a>
+                </#if>
             </div>
         </div>
     </div>

@@ -35,8 +35,8 @@ public class ArticleServiceImpl extends BaseService<Article> implements ArticleS
         Category category = categoryService.getCategory(article.getCategoryId());
 
         article.setStatus(PublishedStatusEnum.PUBLISHED.getStatus());
-        article.setUserId(1L);
-        article.setUsername("系统管理员");
+//        article.setUserId(user.getId());
+//        article.setUsername(user.getRealname());
         article.setCategoryName(category.getName());
         article.setHits(0L);
         article.setTop((byte) 0);
@@ -50,10 +50,13 @@ public class ArticleServiceImpl extends BaseService<Article> implements ArticleS
         return super.selectByPrimaryKey(id);
     }
 
-    public List<Article> searchArticles(int pageNow, int pageSize, String status, String title, String categoryName, String username) {
+    public List<Article> searchArticles(int pageNow, int pageSize, Long userId, String status, String title, String categoryName, String username) {
         Example example = new Example(Article.class);
         Example.Criteria criteria = example.createCriteria();
 
+        if (userId != 0) {
+            criteria.andEqualTo("userId", userId);
+        }
         if (StringUtil.isNotEmpty(status)) {
             criteria.andEqualTo("status", status);
         }

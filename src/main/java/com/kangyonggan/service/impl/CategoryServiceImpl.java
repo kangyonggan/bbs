@@ -20,6 +20,12 @@ public class CategoryServiceImpl extends BaseService<Category> implements Catego
         return super.selectByPrimaryKey(id);
     }
 
+    public Category findCategoryByCode(String code) {
+        Category category = new Category();
+        category.setCode(code);
+        return super.selectOne(category);
+    }
+
     public List<Category> findAllCategory() {
         Category category = new Category();
         category.setStatus(PublishedStatusEnum.PUBLISHED.getStatus());

@@ -19,6 +19,14 @@ public interface CategoryService {
     Category getCategory(Long id);
 
     /**
+     * 根据唯一的code查找栏目
+     *
+     * @param code
+     * @return
+     */
+    Category findCategoryByCode(String code);
+
+    /**
      * 查找所有栏目
      *
      * @return

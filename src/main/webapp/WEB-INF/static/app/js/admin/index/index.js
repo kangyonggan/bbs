@@ -1,0 +1,3 @@
+$(function () {
+    $('#admin').addClass('active');
+});

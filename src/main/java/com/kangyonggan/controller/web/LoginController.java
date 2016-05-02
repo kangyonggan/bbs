@@ -43,12 +43,13 @@ public class LoginController {
             return PATH_INDEX;
         }
 
-        request.getSession().setAttribute("user", u);
+        request.getSession().setAttribute("token", u);
         return "redirect:dashboard";
     }
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
-    public String logout() {
+    public String logout(HttpServletRequest request) {
+        request.getSession().removeAttribute("token");
         return PATH_INDEX;
     }
 

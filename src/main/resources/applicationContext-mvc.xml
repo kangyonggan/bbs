@@ -48,6 +48,11 @@
     <mvc:view-controller path="/404" view-name="/404"/>
     <mvc:view-controller path="/500" view-name="/500"/>
 
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <bean class="com.kangyonggan.interceptor.LoginValidator"/>
+    </mvc:interceptors>
+
     <!-- 配置 FreeMarker视图解析器 -->
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
