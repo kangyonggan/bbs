@@ -1,6 +1,6 @@
 $(function () {
-    $('#user').addClass('active open');
-    $('#user-manage').addClass('active');
+    $('#user-admin').addClass('active open');
+    $('#user-admin-manage').addClass('active');
 
     var showNotify = function (response) {
         Notify.success("删除用户成功");

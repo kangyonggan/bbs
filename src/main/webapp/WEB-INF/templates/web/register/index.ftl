@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
 
-        <div class="space-10"></div>
+        <div class="space-30"></div>
 
         <div class="position-relative">
             <div id="signup-box" class="signup-box widget-box fa-border">

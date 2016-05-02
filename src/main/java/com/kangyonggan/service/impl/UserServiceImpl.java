@@ -1,7 +1,6 @@
 package com.kangyonggan.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.kangyonggan.constants.AppConstants;
 import com.kangyonggan.constants.UserStatusEnum;
 import com.kangyonggan.model.User;
 import com.kangyonggan.service.UserService;
@@ -26,14 +25,14 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     }
 
     public int update(User user) {
-        user.setUpdatedtime(new Date());
+        user.setUpdatedTime(new Date());
         return super.updateByPrimaryKeySelective(user);
     }
 
     @Override
     public int save(User user) {
-        user.setCreatedtime(new Date());
-        user.setUpdatedtime(new Date());
+        user.setCreatedTime(new Date());
+        user.setUpdatedTime(new Date());
         user.setStatus(UserStatusEnum.UNLOCK.getStatus());
         return super.save(user);
     }
@@ -48,7 +47,7 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
         return super.selectByPrimaryKey(id);
     }
 
-    public List<User> searchUsers(int pageNow, String status, String username, String realname, String mobile, String email) {
+    public List<User> searchUsers(int pageNow, int pageSize, String status, String username, String realname, String mobile, String email) {
         Example example = new Example(User.class);
         Example.Criteria criteria = example.createCriteria();
 
@@ -69,7 +68,7 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
         }
         example.setOrderByClause("createdtime desc");
 
-        PageHelper.startPage(pageNow, AppConstants.PAGE_SIZE);
+        PageHelper.startPage(pageNow, pageSize);
         return super.selectByExample(example);
     }
 }

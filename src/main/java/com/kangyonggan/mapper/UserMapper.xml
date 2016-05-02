@@ -15,7 +15,7 @@
         <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
         <result column="status" property="status" jdbcType="VARCHAR"/>
-        <result column="createdTime" property="createdtime" jdbcType="TIMESTAMP"/>
-        <result column="updatedTime" property="updatedtime" jdbcType="TIMESTAMP"/>
+        <result column="createdTime" property="createdTime" jdbcType="TIMESTAMP"/>
+        <result column="updatedTime" property="updatedTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

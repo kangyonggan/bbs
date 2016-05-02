@@ -34,6 +34,15 @@ CREATE TABLE `bbs`.`category` (
 )
   COMMENT '栏目表';
 
+INSERT INTO category (name, code, status, picture, pid, createdTime, updatedTime)
+VALUES
+  ('校园生活', '1001', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13'),
+  ('娱乐八卦', '1002', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13'),
+  ('情感天地', '1003', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13'),
+  ('校花校草', '1004', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13'),
+  ('学习交流', '1005', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13'),
+  ('莲蓬鬼话', '1006', 'published', '', 0, '2016-05-02 11:10:09', '2016-05-02 11:10:13');
+
 CREATE TABLE `bbs`.`article` (
   `id`           BIGINT       NOT NULL AUTO_INCREMENT,
   `title`        VARCHAR(256) NOT NULL,

@@ -11,7 +11,7 @@
         <result column="status" property="status" jdbcType="VARCHAR"/>
         <result column="picture" property="picture" jdbcType="VARCHAR"/>
         <result column="pid" property="pid" jdbcType="BIGINT"/>
-        <result column="createdTime" property="createdtime" jdbcType="TIMESTAMP"/>
-        <result column="updatedTime" property="updatedtime" jdbcType="TIMESTAMP"/>
+        <result column="createdTime" property="createdTime" jdbcType="TIMESTAMP"/>
+        <result column="updatedTime" property="updatedTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

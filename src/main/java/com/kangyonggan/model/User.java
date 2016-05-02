@@ -41,11 +41,11 @@ public class User implements Serializable {
 
     @Column(name = "createdTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date createdtime;
+    private Date createdTime;
 
     @Column(name = "updatedTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date updatedtime;
+    private Date updatedTime;
 
     public Long getId() {
         return id;
@@ -127,20 +127,20 @@ public class User implements Serializable {
         this.status = status;
     }
 
-    public Date getCreatedtime() {
-        return createdtime;
+    public Date getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreatedtime(Date createdtime) {
-        this.createdtime = createdtime;
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public Date getUpdatedtime() {
-        return updatedtime;
+    public Date getUpdatedTime() {
+        return updatedTime;
     }
 
-    public void setUpdatedtime(Date updatedtime) {
-        this.updatedtime = updatedtime;
+    public void setUpdatedTime(Date updatedTime) {
+        this.updatedTime = updatedTime;
     }
 
     @Override
@@ -156,8 +156,8 @@ public class User implements Serializable {
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
                 ", status='" + status + '\'' +
-                ", createdtime=" + createdtime +
-                ", updatedtime=" + updatedtime +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
                 '}';
     }
 }

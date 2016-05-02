@@ -29,6 +29,7 @@ public interface UserService {
      * 搜索符合条件的用户
      *
      * @param pageNow
+     * @param pageSize
      * @param status
      * @param username
      * @param realname
@@ -36,7 +37,7 @@ public interface UserService {
      * @param email
      * @return
      */
-    List<User> searchUsers(int pageNow, String status, String username, String realname, String mobile, String email);
+    List<User> searchUsers(int pageNow, int pageSize, String status, String username, String realname, String mobile, String email);
 
     /**
      * 删除用户

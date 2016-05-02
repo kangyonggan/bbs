@@ -1,11 +1,10 @@
-<#assign title="用户管理">
-<#assign header="用户管理">
+<#assign title="发表帖子">
+<#assign header="发表帖子">
 
 <#assign status = RequestParameters.status!'' />
+<#assign title2 = RequestParameters.title!'' />
+<#assign categoryName = RequestParameters.categoryName!'' />
 <#assign username = RequestParameters.username!'' />
-<#assign realname = RequestParameters.realname!'' />
-<#assign mobile = RequestParameters.mobile!'' />
-<#assign email = RequestParameters.email!'' />
 
 <@override name="breadcrumbs">
 <ul class="breadcrumb">
@@ -14,13 +13,13 @@
         <a href="${ctx}/dashboard">工作台</a>
     </li>
     <li class="active">
-        用户
+        帖子
     </li>
 </ul>
 </@override>
 
 <@override name="button">
-<a class="btn btn-sm btn-primary" href="${ctx}/dashboard/user/create" data-backdrop="static" data-toggle="modal" data-target="#myModal">添加</a>
+<a class="btn btn-sm btn-primary" href="${ctx}/dashboard/article/create">添加</a>
 </@override>
 
 <@override name="content">
@@ -29,25 +28,21 @@
         <div class="form-group">
             <select name="status" class="form-control">
                 <option value="">-- 全部状态 --</option>
-                <#list enums["com.kangyonggan.constants.UserStatusEnum"]?values as enum>
+                <#list enums["com.kangyonggan.constants.PublishedStatusEnum"]?values as enum>
                     <option value="${enum.status}" <#if status=='${enum.status}'>selected</#if>>${enum.value}</option>
                 </#list>
             </select>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" name="username" value="${username}" placeholder="用户名"/>
+            <input type="text" class="form-control" name="title" value="${title2}" placeholder="标题"/>
         </div>
 
         <div class="form-group">
-            <input type="text" class="form-control" name="realname" value="${realname}" placeholder="真实姓名"/>
+            <input type="text" class="form-control" name="categoryName" value="${categoryName}" placeholder="栏目"/>
         </div>
 
         <div class="form-group">
-            <input type="text" class="form-control" name="mobile" value="${mobile}" placeholder="手机"/>
-        </div>
-
-        <div class="form-group">
-            <input type="text" class="form-control" name="email" value="${email}" placeholder="邮箱"/>
+            <input type="text" class="form-control" name="username" value="${username}" placeholder="发表人"/>
         </div>
 
         <button class="btn btn-purple btn-sm">
@@ -60,23 +55,22 @@
 <div class="space-24"></div>
 
 <div class="col-xs-12">
-    <table id="user-table" class="table table-striped table-bordered table-hover">
+    <table id="article-table" class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
             <th>ID</th>
-            <th>用户名</th>
-            <th>真实姓名</th>
+            <th>标题</th>
+            <th>栏目名称</th>
             <th>状态</th>
-            <th>手机号</th>
-            <th>邮箱</th>
-            <th>创建时间</th>
+            <th>发表人</th>
+            <th>发表时间</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
             <#if (page.list)?size gt 0>
-                <#list page.list as user>
-                    <#include "user-tr.ftl"/>
+                <#list page.list as article>
+                    <#include "article-tr.ftl"/>
                 </#list>
             <#else>
             <tr>
@@ -87,12 +81,12 @@
             </#if>
         </tbody>
     </table>
-    <@c.pagination url="${ctx}/dashboard/user" param="status=${status}&username=${username}&realname=${realname}&mobile=${mobile}&email=${email}"/>
+    <@c.pagination url="${ctx}/dashboard/article" param="status=${status}&title=${title2}&categoryName=${categoryName}&username=${username}"/>
 </div>
 </@override>
 
 <@override name="script">
-<script src="${ctx}/static/app/js/dashboard/user/index.js"></script>
+<script src="${ctx}/static/app/js/dashboard/article/index.js"></script>
 </@override>
 
-<@extends name="../layout.ftl"/>
+<@extends name="../../dashboard/layout.ftl"/>

@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
+ * 工作台首页
+ *
  * @author kangyonggan
  * @since 16/4/29
  */

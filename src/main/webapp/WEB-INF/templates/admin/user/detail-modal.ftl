@@ -28,11 +28,11 @@
     </tr>
     <tr>
         <th>创建时间</th>
-        <td>${user.createdtime?datetime}</td>
+        <td>${user.createdTime?datetime}</td>
     </tr>
     <tr>
-        <th>最后跟新时间</th>
-        <td>${user.updatedtime?datetime}</td>
+        <th>最后更新时间</th>
+        <td>${user.updatedTime?datetime}</td>
     </tr>
 </table>
 </@override>

@@ -3,9 +3,9 @@
 <@override name="modal-body">
 <form class="form-horizontal" role="form" id="user-create-form" method="post"
     <#if !user.id??>
-      action="${ctx}/dashboard/user/save"
+      action="${ctx}/admin/user/save"
     <#else>
-      action="${ctx}/dashboard/user/${user.id}/update"
+      action="${ctx}/admin/user/${user.id}/update"
     </#if>>
     <div class="row">
         <div class="form-group">
@@ -89,7 +89,7 @@
     <i class="ace-icon fa fa-check"></i>
     <@spring.message "app.button.save"/>
 </button>
-<script src="${ctx}/static/app/js/dashboard/user/create-modal.js"></script>
+<script src="${ctx}/static/app/js/admin/user/create-modal.js"></script>
 </@override>
 
 <@extends name="../../modal-layout.ftl"/>

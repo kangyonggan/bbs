@@ -8,15 +8,15 @@
         <id column="id" property="id" jdbcType="BIGINT"/>
         <result column="title" property="title" jdbcType="VARCHAR"/>
         <result column="body" property="body" jdbcType="VARCHAR"/>
-        <result column="categoryId" property="categoryid" jdbcType="BIGINT"/>
-        <result column="categoryName" property="categoryname" jdbcType="VARCHAR"/>
+        <result column="categoryId" property="categoryId" jdbcType="BIGINT"/>
+        <result column="categoryName" property="categoryName" jdbcType="VARCHAR"/>
         <result column="status" property="status" jdbcType="VARCHAR"/>
         <result column="hits" property="hits" jdbcType="BIGINT"/>
         <result column="top" property="top" jdbcType="TINYINT"/>
-        <result column="topTime" property="toptime" jdbcType="TIMESTAMP"/>
-        <result column="userId" property="userid" jdbcType="BIGINT"/>
+        <result column="topTime" property="topTime" jdbcType="TIMESTAMP"/>
+        <result column="userId" property="userId" jdbcType="BIGINT"/>
         <result column="username" property="username" jdbcType="VARCHAR"/>
-        <result column="createdTime" property="createdtime" jdbcType="TIMESTAMP"/>
-        <result column="updatedTime" property="updatedtime" jdbcType="TIMESTAMP"/>
+        <result column="createdTime" property="createdTime" jdbcType="TIMESTAMP"/>
+        <result column="updatedTime" property="updatedTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

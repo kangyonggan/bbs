@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * 登录
+ *
  * @author kangyonggan
  * @since 16/5/1
  */

@@ -9,9 +9,9 @@
         <result column="body" property="body" jdbcType="VARCHAR"/>
         <result column="status" property="status" jdbcType="VARCHAR"/>
         <result column="hits" property="hits" jdbcType="BIGINT"/>
-        <result column="articleId" property="articleid" jdbcType="BIGINT"/>
-        <result column="userId" property="userid" jdbcType="BIGINT"/>
+        <result column="articleId" property="articleId" jdbcType="BIGINT"/>
+        <result column="userId" property="userId" jdbcType="BIGINT"/>
         <result column="username" property="username" jdbcType="VARCHAR"/>
-        <result column="createdTime" property="createdtime" jdbcType="TIMESTAMP"/>
+        <result column="createdTime" property="createdTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

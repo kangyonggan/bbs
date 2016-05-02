@@ -27,19 +27,19 @@ public class Reply implements Serializable {
 
     private Long hits;
 
-    @Column(name = "articleid")
+    @Column(name = "articleId")
     private Long articleId;
 
-    @Column(name = "userid")
+    @Column(name = "userId")
     private Long userId;
 
     private String username;
 
-    @Column(name = "createdtime")
+    @Column(name = "createdTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createdTime;
 
-    @Column(name = "updatedtime")
+    @Column(name = "updatedTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updatedTime;
 

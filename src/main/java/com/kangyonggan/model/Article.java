@@ -25,10 +25,10 @@ public class Article implements Serializable {
 
     private String body;
 
-    @Column(name = "categoryid")
+    @Column(name = "categoryId")
     private Long categoryId;
 
-    @Column(name = "categoryname")
+    @Column(name = "categoryName")
     private String categoryName;
 
     private String status;
@@ -37,20 +37,20 @@ public class Article implements Serializable {
 
     private Byte top;
 
-    @Column(name = "toptime")
+    @Column(name = "topTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date topTime;
 
-    @Column(name = "userid")
+    @Column(name = "userId")
     private Long userId;
 
     private String username;
 
-    @Column(name = "createdtime")
+    @Column(name = "createdTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createdTime;
 
-    @Column(name = "updatedtime")
+    @Column(name = "updatedTime")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updatedTime;
 
