@@ -55,7 +55,7 @@
                                     <input type="checkbox" id="accept" value="1" class="ace" />
                                         <span class="lbl">
                                             我接受并阅读
-                                            <a href="#">用户条款</a>
+                                            <a href="${ctx}/register/protocol" target="_blank">注册协议</a>
                                         </span>
                                 </label>
 

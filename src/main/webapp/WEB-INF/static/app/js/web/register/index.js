@@ -27,7 +27,7 @@ $(function () {
             return false;
         }
         if (!accept || accept != 1) {
-            Notify.error("请阅读并同意用户条款");
+            Notify.error("请阅读并同意注册协议");
             return false;
         }
         $("#register-form").submit();

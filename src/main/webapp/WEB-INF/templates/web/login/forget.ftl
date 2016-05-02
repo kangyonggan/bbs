@@ -36,7 +36,7 @@
                                 <div class="space-14"></div>
 
                                 <div class="clearfix">
-                                    <button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+                                    <button id="send" type="button" class="width-35 pull-right btn btn-sm btn-danger">
                                         <i class="ace-icon fa fa-lightbulb-o"></i>
                                         <span class="bigger-110">发送</span>
                                     </button>
@@ -62,7 +62,7 @@
 </@override>
 
 <@override name="page-script">
-<script src="${ctx}/static/app/js/web/login/reset.js"></script>
+<script src="${ctx}/static/app/js/web/login/forget.js"></script>
 </@override>
 
 <@extends name="../../layout.ftl"/>
