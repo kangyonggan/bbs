@@ -19,7 +19,7 @@
 </@override>
 
 <@override name="button">
-<a class="btn btn-sm btn-primary" href="${ctx}/dashboard/article/create">添加</a>
+<a class="btn btn-sm btn-primary" href="${ctx}/dashboard/article/create">发帖</a>
 </@override>
 
 <@override name="content">
