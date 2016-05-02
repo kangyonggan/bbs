@@ -11,6 +11,13 @@ import java.util.List;
 public interface ReplyService {
 
     /**
+     * 删除评论
+     *
+     * @param id
+     */
+    void delete(Long id);
+
+    /**
      * 保存评论
      *
      * @param reply
@@ -18,7 +25,7 @@ public interface ReplyService {
     int save(Reply reply);
 
     /**
-     * 查找帖子的所有评论
+     * 分页查找帖子的所有评论
      *
      * @param pageNow
      * @param pageSize
@@ -26,4 +33,12 @@ public interface ReplyService {
      * @return
      */
     List<Reply> findReplyByArticleId(int pageNow, int pageSize, Long articleId);
+
+    /**
+     * 查找帖子的所有评论
+     *
+     * @param articleId
+     * @return
+     */
+    List<Reply> findAllReplyByArticleId(Long articleId);
 }

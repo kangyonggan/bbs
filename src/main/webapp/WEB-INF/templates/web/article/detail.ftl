@@ -20,7 +20,7 @@
     </div>
 </div>
 
-    <#list page.list as reply>
+    <#list replies as reply>
     <div class="floor">
         <div>${reply.username} <em>${reply.createdTime?datetime}</em> 评论:</div>
         <p>${reply.body}</p>

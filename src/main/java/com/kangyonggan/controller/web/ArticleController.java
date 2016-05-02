@@ -60,10 +60,10 @@ public class ArticleController {
         Article article = articleService.getArticle(id);
         Category category = categoryService.getCategory(article.getCategoryId());
         List<Category> categories = categoryService.findAllCategory();
-        List<Reply> replies = replyService.findReplyByArticleId(pageNow, AppConstants.PAGE_SIZE, id);
-        PageInfo<Reply> page = new PageInfo<Reply>(replies);
+        List<Reply> replies = replyService.findAllReplyByArticleId(id);
+//        PageInfo<Reply> page = new PageInfo<Reply>(replies);
 
-        model.addAttribute("page", page);
+        model.addAttribute("replies", replies);
         model.addAttribute("article", article);
         model.addAttribute("category", category);
         model.addAttribute("categories", categories);

@@ -155,7 +155,8 @@
                         <div class="col-sm-12">
                             <h4 class="widget-title text-muted smaller">
                                 <i class="ace-icon fa orange"></i>
-                                楼主(<a href="${ctx}/admin/user/${user.id}" data-toggle="modal" data-target="#myModal">${user.realname}</a>)
+                                楼主(<a href="${ctx}/admin/user/${user.id}" data-toggle="modal"
+                                      data-target="#myModal">${user.realname}</a>)
                             </h4>
                             <div class="hr hr8 hr-dotted"></div>
                         </div>
@@ -167,53 +168,32 @@
 
                     <div class="space-10"></div>
 
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h4 class="widget-title text-muted smaller">
-                                <i class="ace-icon fa orange"></i>
-                                沙发(<a href="${ctx}/">${user.realname}</a>)
-                            </h4>
-                            <div class="hr hr8 hr-dotted"></div>
+                    <#list replies as reply>
+                        <div class="row reply-div">
+                            <div class="col-sm-12">
+                                <h4 class="widget-title text-muted smaller">
+                                    <i class="ace-icon fa orange"></i>
+                                    <a href="${ctx}/">${reply.username}</a> 在 ${reply.createdTime?datetime} 评论:
+                                </h4>
+                                <div class="widget-toolbar action-buttons">
+                                    <a href="${ctx}/dashboard/article/${article.id}" data-action="reload">
+                                        <i class="ace-icon fa fa-refresh blue"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="javascript:" data-url="${ctx}/reply/${reply.id}/delete" class="pink reply-delete">
+                                        <i class="ace-icon fa fa-trash-o"></i>
+                                    </a>
+                                </div>
+                                <div class="hr hr8 hr-dotted"></div>
+                            </div>
+
+                            <div class="col-sm-12 well">
+                            ${reply.body}
+                            </div>
                         </div>
 
-                        <div class="col-sm-12 well">
-                        ${article.body}
-                        </div>
-                    </div>
-
-                    <div class="space-10"></div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h4 class="widget-title text-muted smaller">
-                                <i class="ace-icon fa orange"></i>
-                                板凳(<a href="${ctx}/">${user.realname}</a>)
-                            </h4>
-                            <div class="hr hr8 hr-dotted"></div>
-                        </div>
-
-                        <div class="col-sm-12 well">
-                        ${article.body}
-                        </div>
-                    </div>
-
-                    <div class="space-10"></div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h4 class="widget-title text-muted smaller">
-                                <i class="ace-icon fa orange"></i>
-                                地板(<a href="${ctx}/">${user.realname}</a>)
-                            </h4>
-                            <div class="hr hr8 hr-dotted"></div>
-                        </div>
-
-                        <div class="col-sm-12 well">
-                        ${article.body}
-                        </div>
-                    </div>
-
-                    <div class="space-10"></div>
+                        <div class="space-10"></div>
+                    </#list>
 
                     <div class="hr hr8 hr-double hr-dotted"></div>
 

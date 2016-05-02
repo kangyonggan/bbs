@@ -19,6 +19,10 @@ import java.util.List;
 @Transactional
 public class ReplyServiceImpl extends BaseService<Reply> implements ReplyService {
 
+    public void delete(Long id) {
+        super.deleteByPrimaryKey(id);
+    }
+
     @Override
     public int save(Reply reply) {
         reply.setStatus(PublishedStatusEnum.PUBLISHED.getStatus());
@@ -36,6 +40,17 @@ public class ReplyServiceImpl extends BaseService<Reply> implements ReplyService
         example.setOrderByClause("createdTime desc");
 
         PageHelper.startPage(pageNow, pageSize);
+        return super.selectByExample(example);
+    }
+
+    public List<Reply> findAllReplyByArticleId(Long articleId) {
+        Example example = new Example(Reply.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("articleId", articleId);
+        criteria.andEqualTo("status", PublishedStatusEnum.PUBLISHED.getStatus());
+
+        example.setOrderByClause("createdTime desc");
+
         return super.selectByExample(example);
     }
 }

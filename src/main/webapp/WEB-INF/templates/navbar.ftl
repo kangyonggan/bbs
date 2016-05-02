@@ -301,7 +301,7 @@
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
                             <a href="${ctx}/dashboard">
-                                <i class="ace-icon fa fa-cog"></i>
+                                <i class="menu-icon fa fa-tachometer"></i>
                                 工作台
                             </a>
                         </li>
@@ -309,7 +309,7 @@
                         <#if token.id==1>
                         <li>
                             <a href="${ctx}/admin">
-                                <i class="ace-icon fa fa-user"></i>
+                                <i class="ace-icon fa fa-cog"></i>
                                 后台
                             </a>
                         </li>

@@ -4,9 +4,11 @@ import com.github.pagehelper.PageInfo;
 import com.kangyonggan.constants.AppConstants;
 import com.kangyonggan.model.Article;
 import com.kangyonggan.model.Category;
+import com.kangyonggan.model.Reply;
 import com.kangyonggan.model.User;
 import com.kangyonggan.service.ArticleService;
 import com.kangyonggan.service.CategoryService;
+import com.kangyonggan.service.ReplyService;
 import com.kangyonggan.service.UserService;
 import freemarker.ext.beans.BeansWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +44,9 @@ public class DashboardArticleController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ReplyService replyService;
 
     /**
      * 列表界面
@@ -113,9 +118,11 @@ public class DashboardArticleController {
     public String detail(@PathVariable("id") Long id, Model model) {
         Article article = articleService.getArticle(id);
         User user = userService.getUser(article.getUserId());
+        List<Reply> replies = replyService.findAllReplyByArticleId(id);
 
         model.addAttribute("user", user);
         model.addAttribute("article", article);
+        model.addAttribute("replies", replies);
         return PATH_DETAIL;
     }
 

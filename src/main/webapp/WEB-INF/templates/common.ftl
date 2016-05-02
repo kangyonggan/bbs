@@ -164,14 +164,14 @@
                 <b class="arrow"></b>
             </li>
 
-            <li class="" id="user-profile-logo">
-                <a href="${ctx}/dashboard/user/${token.id}/logo">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    我的头像
-                </a>
+            <#--<li class="" id="user-profile-logo">-->
+                <#--<a href="${ctx}/dashboard/user/${token.id}/logo">-->
+                    <#--<i class="menu-icon fa fa-caret-right"></i>-->
+                    <#--我的头像-->
+                <#--</a>-->
 
-                <b class="arrow"></b>
-            </li>
+                <#--<b class="arrow"></b>-->
+            <#--</li>-->
 
             <li class="" id="user-dashboard-password">
                 <a href="${ctx}/dashboard/user/${token.id}/password">
