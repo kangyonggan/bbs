@@ -1,5 +1,5 @@
 <#assign title="发表帖子" />
-<#assign header="发表" />
+<#assign header="发帖" />
 
 <@override name="breadcrumbs">
 <ul class="breadcrumb">
